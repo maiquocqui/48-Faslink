@@ -1,0 +1,75 @@
+footer
+	+pos(rel,null)
+	.footertop
+		background: $white
+		padding: 40px 0 20px
+		.footercol
+			margin-bottom: 20px
+			+media-breakpoint-down(xs)
+				text-align: center
+		.ftitle, .company
+			+fs(13rem)
+			font-weight: 700
+			text-transform: uppercase
+			margin-bottom: 20px
+			&:after
+				content: ''
+				display: block
+				width: 40px
+				height: 2px
+				background: $orange
+				margin-top: 10px
+		.company
+			&:after
+				opacity: 0
+		.about
+			+fs(13rem)
+			line-height: 1.5
+		.footerlink
+			ul 
+				li 
+					+fs(13rem)
+					a 
+						color: $main
+						&:hover
+							color: $orange
+		.social
+			a 
+				display: inline-block
+				width: 40px
+				height: 40px
+				+bor-rad(50px)
+				border: 1px solid $blue
+				color: $blue
+				+fs(20rem)
+				line-height: 40px
+				text-align: center
+				.fa 
+					&:before
+						line-height: 1
+				+ a 
+					margin-left: 15px
+				&:hover
+					color: $white
+					background: $orange
+					border-color: $orange
+	.footerbottom
+		background: $blue
+		.copyright
+			padding: 24px 0
+			text-align: center
+			+fs(14rem)
+			color: $white
+	.up
+		+pos(abs, -90px null null 50%)
+		+transform(translateX(-50%))
+		width: 50px
+		height: 50px
+		+bor-rad(50px)
+		+fs(24rem)
+		line-height: 46px
+		text-align: center
+		background: $blue
+		color: $white
+		z-index: 50
+		cursor: pointer

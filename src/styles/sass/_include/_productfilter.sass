@@ -1,0 +1,309 @@
+.product-sidebar
+	margin: 30px 0
+	+pos(rel,null)
+	+media-breakpoint-down(md)
+		+pos(fix, 72px null 0 0)
+		width: 35%
+		background: darken($white,5%)
+		z-index: 100
+		margin: 0
+		padding: 0
+		+transition(all,0.5s)
+		+transform(translateX(-100%))
+		&.open
+			+transform(translateX(0%))
+	+media-breakpoint-down(md)
+		width: 40%
+	+media-breakpoint-down(sm)
+		width: 50%
+	+media-breakpoint-down(xs)
+		width: 85%
+	.filter-toggle
+		width: 40px
+		height: 40px
+		+bor-rad(0)
+		+pos(abs, 0 0 null null)
+		+transform(translateX(100%))
+		background: $lblack
+		color: $white
+		font-weight: normal
+		+fs(18rem)
+		line-height: 40px
+		text-align: center
+		display: none
+		&:before
+			content: '\f00b'
+			font-family: 'fontawesome'
+		+media-breakpoint-down(md)
+			display: block
+	.filter-wrap
+		+media-breakpoint-down(md)
+			+pos(abs, 0 null 0 0)
+			right: 0
+			overflow: auto
+			padding: 50px 0
+	.filter-group
+		margin-bottom: 20px
+		+media-breakpoint-down(md)
+			padding: 0 30px
+		.filter-title
+			+fs(18rem)
+			font-weight: bold
+			text-transform: uppercase
+			margin-bottom: 15px
+			color: $lblack
+			&:after
+				content: ''
+				display: block
+				width: 30px
+				height: 2px
+				background: $red
+				margin-top: 3px
+		.product-category
+			> ul 
+				li 
+					+fs(14rem)
+					font-weight: 600
+					+pos(rel,null)
+					padding: 6px 0
+					> a
+						color: darken($white,60%)
+						&:hover
+							color: $red
+					.btn-showsubcate
+						display: block
+						+pos(abs, 12px 0 null null)
+						width: 12px
+						height: 12px
+						+transition(all,0.3s)
+						cursor: pointer
+						&:before
+							content: ''
+							display: block
+							height: 2px
+							background: darken($white,20%)
+							+pos(abs, 50% 0 null 0)
+							+transform(translateY(-50%))
+							+transition(all,0.3s)
+						&:after
+							content: ''
+							display: block
+							height: 2px
+							background: darken($white,20%)
+							+pos(abs, 50% 0 null 0)
+							+transform(translateY(-50%)rotateZ(90deg))
+							+transition(all,0.3s)
+						&:hover
+							&:before, &:after
+								background: darken($white,40%)
+						&.active
+							+transform(rotateZ(135deg))
+					.sub-cate
+						display: none
+						> ul 
+							padding-left: 20px
+							+pos(rel,null)
+							padding-top: 5px
+							&:before
+								content: ''
+								display: block
+								+pos(abs, 5px null 14px 5px)
+								width: 2px
+								background: darken($white,10%)
+							> li 
+								+fs(14rem)
+								font-weight: bold
+								text-transform: uppercase
+								+pos(rel,null)
+								padding: 5px 0
+								&:before
+									content: ''
+									display: block
+									width: 5px
+									height: 2px
+									background: darken($white,10%)
+									+pos(abs, 15px null null -13px)
+								> a
+									color: darken($white,40%)
+									&:hover
+										color: $red
+								&.active
+									a 
+										color: $lblack
+					&.active
+						a 
+							color: $red
+						.sub-cate
+							display: block
+				.col-xs-6
+					padding: 0
+					li 
+						&:nth-child(1), &:nth-child(2)
+							+fs(14rem)
+							&:after
+								display: none
+						a
+							color: darken($white,60%)
+							&:hover
+								color: $red
+						&.active
+							a 
+								color: $red
+		.product-size
+			padding: 10px 0
+			display: flex
+			flex-wrap: wrap
+			.size, li
+				display: inline-block
+				a 
+					display: block
+					padding: 0 10px
+					line-height: 32px
+					margin-right: 5px
+					+fs(13rem)
+					margin-bottom: 5px
+					border: 1px solid darken($white,20%)
+					text-align: center
+					+transition(all,0.5s)
+					cursor: pointer
+					color: darken($white,40%)
+					font-weight: bold
+					&:hover
+						color: $red
+					&.active
+						background: $lblack
+						border-color: $lblack
+						color: $white
+		.color-picker
+			.color
+				display: inline-block
+				margin-bottom: 5px
+				a 
+					display: block
+					padding: 5px
+					color: darken($white,40%)
+					border: 1px solid darken($white,20%)
+					&:hover
+						border-color: $red
+				.color-img
+					width: 24px
+					height: 24px
+					display: inline-block
+					vertical-align: middle
+					img
+						border: 2px solid darken($white,20%)
+				.color-name
+					display: none
+					vertical-align: middle
+					color: darken($white,40%)
+					+transition(all,0.5s)
+					cursor: pointer
+					+fs(0)
+				&:hover
+					.color-name
+						color: $red
+				a
+					&.active
+						background: $lblack
+						color: $white
+						border-color: $lblack
+						.color-img
+							img 
+								border-color: $main
+						.color-name
+							color: $white
+		.filter-range
+			margin: 10px 10px 15px
+			margin-right: 50px
+			+pos(rel,null)
+			#slider-range
+				width: 100%
+				height: 10px
+				background: darken($white,20%)
+				margin: 10px 0 15px
+				+pos(rel,null)
+				+transition(all,0s)
+			.ui-widget-header
+				background: darken($white,60%)
+				position: absolute
+				z-index: 1
+				display: block
+				top: 0px
+				height: 10px
+				+transition(all,0s)
+			.ui-slider-handle
+				position: absolute
+				z-index: 2
+				cursor: default
+				touch-action: none
+				top: 5px
+				margin-left: -0.6em
+				left: 15%
+				width: 16px
+				height: 16px
+				background: darken($white,60%)
+				box-shadow: 0px 0px 5px -1px rgba(0,0,0,.7)
+				z-index: 1
+				cursor: pointer
+				+transition(all,0s)
+				+transform(translateY(-50%))
+				&:hover
+					background: $main
+			.min, .max
+				width: 16px
+				height: 16px
+				background: darken($white,60%)
+				box-shadow: 0px 0px 5px -1px rgba(0,0,0,.7)
+				z-index: 1
+				cursor: pointer
+				+transition(all,0.5s)
+				+transform(translateY(-50%))
+				&:hover
+					background: $main
+			.min
+				+pos(abs, 50% null null 0)
+			.max 
+				+pos(abs, 50% 0 null null)
+		.price-range
+			+fs(14rem)
+			font-weight: bold
+		.min-input, .max-input
+			display: inline-block
+			margin: 0 5px
+			font-weight: bold
+			+fs(16rem)
+			color: darken($red,20%)
+.sort
+	margin-bottom: 40px
+	float: right
+	+media-breakpoint-down(sm)
+		float: none
+		clear: both
+	.sort-amount, .sort-filter
+		display: inline-block
+		label
+			font-weight: bold
+			color: darken($white,60%)
+			margin-right: 10px
+		select
+			border: none
+			background: darken($white,10%)
+			padding: 8px 10px
+			+fs(14rem)
+			font-weight: bold
+			color: darken($white,60%)
+			+transition(all,0.5s)
+			cursor: pointer
+			&:hover
+				background: $lblack
+				color: $white
+			&:active, &:focus
+				background: $white
+				color: darken($white,60%)
+			option
+				background: $white
+	.sort-filter
+		margin-left: 15px
+		+media-breakpoint-down(xs)
+			margin-left: 0
+			margin-top: 10px

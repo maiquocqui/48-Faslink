@@ -1,0 +1,76 @@
+.about-history
+	margin-bottom: 50px
+	+media-breakpoint-down(md)
+		text-align: center
+.history-img
+	margin-bottom: 50px
+	+media-breakpoint-down(md)
+		margin-bottom: 20px
+	.item
+		img
+			width: 100%
+.history-year
+	width: 250px
+	margin: 0px auto
+	padding: 0px 30px
+	margin-bottom: 40px
+	+media-breakpoint-down(md)
+		margin-bottom: 20px
+	.slick-prev, .slick-next
+		+pos(abs, 50% null null null)
+		+transform(translateY(-50%))
+		+fs(0)
+		color: darken($white,60%)
+		opacity: 0.5
+		+transition(all,0.3s)
+		&:before
+			content: ''
+			font-family: 'fontawesome'
+			+fs(36rem)
+		&:hover
+			color: $red
+			opacity: 1
+	.slick-prev
+		left: 0
+		&:before
+			content: '\f104'
+	.slick-next
+		right: 0
+		&:before
+			content: '\f105'
+	.item
+		border-bottom: 2px dotted darken($white,10%)
+	.year
+		text-align: center
+		+fs(72rem)
+		font-weight: 900
+		color: $red
+.history-nav
+	&:before
+		content: ''
+		display: block
+		width: 100%
+		height: 20px
+		background: url(../img/about/ruler.jpg) bottom left repeat-x
+	.item
+		text-align: center
+		padding: 10px 0
+		// overflow: hidden
+		+pos(rel,null)
+		cursor: pointer
+		&:before
+			content: ''
+			display: block
+			width: 100%
+			height: 0px
+			border-bottom: 2px dotted darken($white,10%)
+			+pos(abs, 45% null null null)
+		&.slick-current
+			color: $red
+	.year
+		display: inline-block
+		font-weight: 700
+		+pos(rel,null)
+		z-index: 1
+		background: $white
+		padding: 0px 3px

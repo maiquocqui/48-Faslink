@@ -1,0 +1,330 @@
+.product-banner
+.collection-list
+	padding: 60px 0
+.design-uniform
+	background: $bluebg
+	.uniform-intro
+		padding: 60px 0 130px
+	.btn-wrap
+		text-align: center
+		.link
+			+mainbutton
+			text-transform: uppercase
+			color: $white
+			background: $orange
+			&:hover
+				background: darken($orange,10%)
+				border-color: darken($orange,10%)
+.lookbook-page
+	padding: 60px 0
+	.pagedes
+		color: $blue
+	.lookbook-list
+	.lookbook-col
+		margin-bottom: 60px
+		figure
+			+pos(rel,null)
+			.img
+				display: block
+				margin-bottom: 50px
+				img
+					width: 100%
+			.social
+				+pos(abs, 60px null null 0)
+				a
+					display: block
+					width: 30px
+					height: 30px
+					line-height: 30px
+					text-align: center
+					background: $white
+					color: darken($white,40%)
+					border-bottom: 1px solid darken($white,20%)
+					+fs(14rem)
+					&:last-child
+						border: none
+					&:hover
+						background: $blue
+						color: $white
+			figcaption
+				+fs(14rem)
+				text-align: center
+				.name
+					font-weight: 600
+					text-transform: uppercase
+					a
+						color: $bluegrey
+				.des
+
+.product-solution
+	padding: 80px 0
+	text-align: center
+	.solution-intro
+		width: 50%
+		margin: 0px auto
+	.solution-img
+		margin-bottom: 40px
+	.solution-title
+		+fs(30rem)
+		font-weight: 800
+		line-height: 1.3
+		color: $white
+		margin-bottom: 25px
+		text-transform: uppercase
+	.solution-des
+		+fs(16rem)
+		margin-bottom: 60px
+		color: $white
+	.link
+		display: inline-block
+		width: 210px
+		+bor-rad(5px)
+		line-height: 50px
+		+fs(16rem)
+		text-transform: uppercase
+		color: $white
+		background: $orange
+		&:hover
+			background: darken($orange,10%)
+		&:after
+			content: '\f105'
+			font-family: 'fontawesome'
+			margin-left: 5px
+			+fs(18rem)
+
+.solution-material
+	padding: 80px 0
+	.headtitle
+		color: $orange
+		&:after
+			background: $orange
+	.pagedes
+		color: $blue
+	.solution-slide1
+		.slick-prev, .slick-next
+			+fs(0)
+			color: $white
+			background: $blue
+			+bor-rad(50px)
+			width: 50px
+			height: 50px
+			line-height: 50px
+			text-align: center
+			z-index: 5
+			&:before
+				content: ''
+				font-family: 'fontawesome'
+				+fs(24rem)
+		.slick-prev
+			+pos(abs,35% calc(50% - 40px) null null)
+			&:before
+				content: '\f104'
+		.slick-next
+			+pos(abs, null calc(50% - 40px) 35% null)
+			&:before
+				content: '\f105'
+		.item
+		.material
+			figure
+				+flexbox
+				// flex-wrap: wrap
+				.material-img
+					width: 50%
+					order: 2
+					img
+				figcaption
+					width: 50%
+					margin-right: 30px
+					order: 1
+					text-align: right
+					+flexbox
+					flex-wrap: wrap
+					align-items: center
+					align-content: center
+					padding-right: 30px
+					.material-title
+						+fs(24rem)
+						font-weight: 600
+						color: $orange
+						margin-bottom: 20px
+						width: 100%
+					.material-des
+						+fs(16rem)
+						color: $blue
+						width: 100%
+						p 
+							margin-bottom: 20px
+
+.solution-style
+	background: $bluebg
+	padding: 80px 0
+	text-align: center
+	margin-bottom: 65px
+	.headtitle
+		color: $orange
+		&:after
+			background: $orange
+	.pagedes
+		color: $blue
+	.solution-slide2
+		.slick-prev, .slick-next
+			+fs(0)
+			color: $blue
+			background: $white
+			+bor-rad(50px)
+			width: 50px
+			height: 50px
+			line-height: 50px
+			text-align: center
+			z-index: 5
+			&:before
+				content: ''
+				font-family: 'fontawesome'
+				+fs(24rem)
+		.slick-prev
+			+pos(abs,35% null null calc(50% - 40px))
+			&:before
+				content: '\f104'
+		.slick-next
+			+pos(abs, null null 35% calc(50% - 40px))
+			&:before
+				content: '\f105'
+		.item
+		.material
+			figure
+				+flexbox
+				// flex-wrap: wrap
+				.material-img
+					width: 50%
+					order: 1
+					img
+				figcaption
+					width: 50%
+					margin-left: 30px
+					order: 2
+					text-align: right
+					+flexbox
+					flex-wrap: wrap
+					align-items: center
+					align-content: center
+					padding-left: 30px
+					.material-title
+						+fs(24rem)
+						font-weight: 600
+						color: $orange
+						margin-bottom: 20px
+						width: 100%
+					.material-des
+						+fs(16rem)
+						color: $blue
+						width: 100%
+						p 
+							margin-bottom: 20px
+
+.hidden
+	display: none
+.product-custom
+	padding: 0 0 140px
+.product-page
+	padding: 30px 0 0
+	h1
+		color: $blue
+		margin: 0 0 30px
+		&:after
+			background: $blue
+.product-col
+	figure
+		figcaption
+			position: relative
+			padding-top: 40px
+	.promotion
+		position: absolute
+		right: 0
+		top: 5px
+		span
+			padding: 3px 10px
+			color: $white
+			display: inline-block
+			+fs(10rem)
+			text-transform: uppercase
+		&.opt1
+			span
+				background: #cb2335
+		&.opt2
+			span
+				background: #183051
+		&.opt3
+			span
+				background: #707070
+		&.opt4
+			span
+				background: #00582c
+	.price
+		color: $orange
+		+fs(14rem)
+	h2
+		text-transform: uppercase
+		+fs(14rem)
+		font-weight: 600
+		margin: 0 0 15px
+		a
+			color: $black
+			&:hover
+				color: $orange
+.product-detail-page
+	.product-custom
+		width: 100%
+		padding-top: 30px
+		.slick-next,
+		.slick-prev
+			font-size: 0
+			&:before
+				font-family: "FontAwesome"
+				font-size: 20px
+				color: $brown
+			&:hover
+				&:before
+					color: $orange
+		.slick-next
+			&:before
+				content: "\f054"
+		.slick-prev
+			&:before
+				content: "\f053"
+		.product-col
+			margin: 0 10px
+.product-slide-wrap
+	.item
+		.product-img
+			cursor: pointer
+			padding: 5px
+			margin: 5px
+			border: 1px solid darken($white, 15%)
+			+transition(all 0.3s)
+		&:hover,
+		&.slick-current
+			.product-img
+				border: 1px solid $orange
+
+.product-detail
+	h1
+		+fs(22rem)
+		color: $blue
+		line-height: 1.3
+		&:after
+			content: ''
+			display: block
+			height: 4px
+			width: 100px
+			background: $blue
+			margin: 20px 0
+		+media-breakpoint-up(lg)
+			+fs(40rem)
+	.code
+		text-transform: uppercase
+		color: $brown
+		+fs(15rem)
+	.price
+		color: $orange
+		+fs(20rem)
+

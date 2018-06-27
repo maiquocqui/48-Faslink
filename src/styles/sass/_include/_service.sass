@@ -1,0 +1,276 @@
+.bg-grey
+	background: $bluebg
+.service-img
+	height: 100%
+.service-intro
+	height: 100%
+	padding: 50px
+	background: $bluebg
+	.caption
+		+fs(28rem)
+		font-weight: bold
+		color: $blue
+		margin-bottom: 30px
+		&:after
+			content: ''
+			display: block
+			width: 60px
+			height: 4px
+			background: $blue
+			margin-top: 10px
+	.service-des
+		+fs(16rem)
+		color: $blue
+		margin-bottom: 30px
+	.intro-list
+		li 
+			margin-bottom: 15px
+			+flexbox
+			flex-wrap: wrap
+			width: 50%
+			color: $blue
+			.icon
+				width: 50px
+				img
+			.des
+				width: calc(100% - 50px)
+				padding-left: 10px
+				.title
+					+fs(16rem)
+					margin-bottom: 5px
+
+.service-workflow
+	padding-top: 80px
+	.flowlist
+		.flowcol
+			width: 20%
+			padding: 0px 15px
+			.number
+				+fs(66rem)
+				font-weight: 800
+				color: $blue
+			.flowname
+				+fs(16rem)
+				font-weight: 700
+				color: $blue
+				margin-bottom: 15px
+				&:after
+					content: ''
+					display: block
+					width: 30px
+					height: 2px
+					background: $blue
+					margin-top: 15px
+			.flowdes
+				+fs(14rem)
+				color: $blue
+.service-help
+	background: $blue
+	margin-bottom: 130px
+	.help
+		text-align: center
+		padding: 60px 0
+	.pagedes
+		color: $white
+		margin-bottom: 30px
+	.hotline
+		display: inline-block
+		vertical-align: middle
+		+pos(rel,null)
+		margin-right: 30px
+		a
+			display: block
+			+fs(24rem)
+			line-height: 40px
+			+pos(rel,null)
+			color: $white
+			letter-spacing: 1px
+			padding: 0px 20px
+			border: 2px solid $white
+			box-sizing: border-box
+			+bor-rad(50px)
+			.fa 
+				margin-right: 10px
+		.des
+			+pos(abs, null null -6px 50%)
+			+transform(translateX(-50%))
+			padding: 0px 10px
+			background: $blue
+			color: $white
+			+fs(11rem)
+			white-space: nowrap
+	.email
+		display: inline-block
+		vertical-align: middle
+		a
+			display: block
+			line-height: 40px
+			background: $white
+			border: 2px solid $white
+			color: $orange
+			text-transform: uppercase
+			+fs(18rem)
+			+bor-rad(50px)
+			padding: 0px 30px
+			&:hover
+				background: $orange
+				color: $white
+				border-color: $orange
+.service-material
+	padding: 100px 0
+	.material-list
+		.material
+			margin-bottom: 40px
+			figure
+				+flexbox
+				flex-wrap: wrap
+				.materialimg
+					width: 64px
+					img
+						width: 100%
+				figcaption
+					width: calc(100% - 64px)
+					padding-left: 20px
+					.materialname
+						font-weight: 600
+						color: $orange
+						margin-bottom: 10px
+					.materialdes
+.product-picture
+	padding-bottom: 80px
+	.picture-list
+		margin-bottom: 40px
+		.picture
+			display: block
+			+pos(rel,null)
+			&:before
+				content: ''
+				display: block
+				+pos(abs, 0 null 0 0)
+				right: 0
+				z-index: 3
+				background: color-rgba($blue,0.8)
+				opacity: 0
+				+transition(all,0.3s)
+			&:after
+				content: '\f178'
+				font-family: 'fontawesome'
+				width: 50px
+				height: 50px
+				line-height: 50px
+				text-align: center
+				+bor-rad(50px)
+				border: 1px solid $white
+				color: $white
+				+fs(18rem)
+				z-index: 5
+				+pos(abs, 50% null null 50%)
+				+transform(translate(-50%, -50%))
+				opacity: 0
+				+transition(all,0.3s)
+			&:hover
+				&:before, &:after
+					opacity: 1
+.pages
+	text-align: center
+	.pagination
+		margin: 0
+		padding: 0
+		text-align: center
+		li 
+			display: inline-block
+			a,span 
+				display: block
+				color: $blue
+				width: 40px
+				height: 40px
+				line-height: 40px
+				text-align: center
+				font-weight: 600
+				border-bottom: 2px solid transparent
+			&.active
+				a,span 
+					color: $orange
+					border-bottom: 2px solid $orange
+.popular-client
+	margin-bottom: 150px
+	.client-list
+		.slick-prev, .slick-next
+			display: none
+		.slick-dots
+			text-align: center
+			margin-top: 50px
+			li
+				display: inline-block
+				vertical-align: middle
+				width: 12px
+				height: 12px
+				+bor-rad(50px)
+				background: $blue
+				border: 2px solid $white
+				+ li
+					margin-left: 15px
+				button
+					display: none
+				&.slick-active
+					border-color: $blue
+					background: $white
+		.item
+			.clientgroup
+				+flexbox
+				flex-wrap: wrap
+				.clientcol
+					+flexbox
+					justify-content: center
+					align-items: center
+					width: 20%
+					padding: 20px
+.bg-blue
+	background: $blue
+.chamsockhachhang
+	padding-top: 60px
+	color: $white
+	+fs(13rem)
+	.help
+		padding: 20px 50px 60px 0
+	.hotline,.mail
+		margin: 0 10px
+	.hotline
+		border: 2px solid $white
+		position: relative
+		padding: 2px 25px
+		+bor-rad(15px)
+		color: $white
+		a
+			+fs(24rem)
+			color: $white
+			cursor: text
+		.des
+			background: $blue
+			position: absolute
+			bottom: -10px
+			font-size: 10px
+			left: 15%
+			padding: 2px 5px
+	.email
+		background: $white
+		padding: 7px 25px
+		+bor-rad(15px)
+		+fs(17rem)
+		color: $orange
+		+transition(all 0.3s)
+		&:hover
+			background: $orange
+			color: $white
+.clientcol
+	img
+		filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")
+		filter: gray
+		-webkit-filter: grayscale(100%)
+		&:hover
+			filter: none
+			-webkit-filter: grayscale(0%)
+	+media-breakpoint-up(lg)
+		width: 20%
+		padding: 0 1%
+		display: inline-block

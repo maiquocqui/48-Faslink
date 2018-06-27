@@ -1,0 +1,219 @@
+.searchpanel
+	+pos(abs, 100% -200px null null)
+	min-width: 800px
+	z-index: 200
+	box-shadow: 0px 5px 20px color-rgba($black,0.3)
+	border: 1px solid darken($white,10%)
+	background: $white
+	display: none
+	+media-breakpoint-down(lg)
+		+pos(static,unset)
+		box-shadow: none
+		border: none
+		margin: 10px
+		min-width: unset
+		display: block
+	.nav-tabs
+		transform-origin: 0% 0%
+		+transform(rotateZ(90deg))
+		+pos(abs, -1px -379px null null)
+		background: $white
+		width: 338px
+		border: none
+		margin: 0
+		padding: 0
+		display: flex
+		border-bottom: 3px solid $blue
+		+media-breakpoint-down(lg)
+			+pos(static,unset)
+			width: 100%
+			+transform(rotateZ(0))
+			border-bottom: 2px solid $blue
+		.nav-item
+			width: 100%
+			float: none
+			margin: 0
+			padding: 0
+			text-align: center
+			+ .nav-item
+				margin-left: 0
+			.nav-link
+				+bor-rad(0)
+				font-family: 'open sans condensed'
+				font-weight: 700
+				color: $pink
+				border: none
+				+media-breakpoint-down(lg)
+					+fs(13rem)
+					line-height: 30px
+					padding: 0
+				&.active
+					background: $blue
+					color: $white
+					border: none
+	.tab-content
+		min-height: 336px
+		+media-breakpoint-down(lg)
+			height: calc(100vh - 129px)
+			overflow: auto
+	.title
+		background: lighten($pink,50%)
+		font-family: 'open sans condensed'
+		font-weight: 700
+		color: $pink
+		text-transform: uppercase
+		+fs(13rem)
+		line-height: 30px
+		padding: 0px 10px
+		+media-breakpoint-down(lg)
+			text-transform: none
+		// border-bottom: 1px solid darken($white,10%)
+		
+	.nopadding
+		width: 25%
+		+media-breakpoint-down(lg)
+			width: 100%
+		+ .nopadding
+			+media-breakpoint-up(xl)
+				border-left: 1px solid darken($white,10%)
+	.itemlist
+		display: flex
+		flex-wrap: wrap
+	.item
+		padding: 5px
+		border-bottom: 1px dashed darken($white,10%)
+		+media-breakpoint-down(lg)
+			width: 100%
+		figure
+			display: flex
+			flex-wrap: wrap
+			.itemimg
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 50px
+				height: 50px
+				// border: 1px solid darken($white,10%)
+				img 
+					max-width: 90%
+					max-height: 90%
+			figcaption
+				width: calc(100% - 50px)
+				display: flex
+				align-items: center
+				padding-left: 5px
+				.itemname
+					+fs(12rem)
+					a 
+						color: $main
+						&:hover
+							color: $blue
+	.itemlist.news
+		.item
+			width: 25%
+			+media-breakpoint-down(lg)
+				width: 100%
+			// +media-breakpoint-down(md)
+			// 	width: 100%
+
+
+.search-page
+	margin-bottom: 40px
+	.resulttitle
+		+fs(28rem)
+		font-family: 'open sans condensed'
+		text-transform: uppercase
+		font-weight: 700
+		color: $main
+		margin-bottom: 30px
+		strong 
+			color: $blue
+	.resultlist
+		margin-bottom: 20px
+		.resultitem
+			+fs(13rem)
+			color: $main
+			padding: 5px 10px
+			background: darken($white,5%)
+			strong 
+				color: $red
+		.title
+			background: lighten($blue,60%)
+			font-family: 'open sans condensed'
+			font-weight: 700
+			color: $blue
+			text-transform: uppercase
+			+fs(13rem)
+			line-height: 30px
+			padding: 0px 10px
+			// border-bottom: 1px solid darken($white,10%)
+		.nopadding
+			width: 25%
+			+media-breakpoint-down(md)
+				width: 100%
+			+ .nopadding
+				+media-breakpoint-up(lg)
+					border-left: 1px solid darken($white,10%)
+		.itemlist
+			display: flex
+			flex-wrap: wrap
+		.item
+			padding: 5px
+			border-bottom: 1px dashed darken($white,10%)
+			+media-breakpoint-down(md)
+				width: 33.33%
+			+media-breakpoint-down(sm)
+				width: 50%
+			+media-breakpoint-down(xs)
+				width: 100%
+			figure
+				display: flex
+				flex-wrap: wrap
+				.itemimg
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 50px
+					height: 50px
+					// border: 1px solid darken($white,10%)
+					img 
+						max-width: 90%
+						max-height: 90%
+				figcaption
+					width: calc(100% - 50px)
+					display: flex
+					align-items: center
+					padding-left: 5px
+					.itemname
+						+fs(12rem)
+						a 
+							color: $main
+							&:hover
+								color: $blue
+		&.news
+			.item
+				width: 25%
+				+media-breakpoint-down(md)
+					width: 33.33%
+				+media-breakpoint-down(sm)
+					width: 50%
+				+media-breakpoint-down(xs)
+					width: 100%
+	.hashtag
+		padding: 10px 0
+		a 
+			display: inline-block
+			line-height: 30px
+			padding: 0px 10px
+			color: $main
+			font-weight: 600
+			border: 1px solid darken($white,10%)
+			+fs(14rem)
+			margin: 0 5px 5px 0
+			&:hover
+				color: $blue
+				border-color: $blue
+				background: lighten($blue,60%)
+			&:before
+				content: '#'
+				

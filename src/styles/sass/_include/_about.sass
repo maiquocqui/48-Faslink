@@ -1,0 +1,192 @@
+.about-title
+	+fs(30rem)
+	font-weight: 600
+	text-transform: uppercase
+	color: $white 
+	&:after
+		content: ''
+		display: inline-block
+		vertical-align: middle
+		width: 60px
+		height: 3px
+		background: $white
+		margin-left: 30px
+.about-intro
+	background: $blue
+	padding: 100px 0
+	.intro 
+		figure
+			+flexbox
+			flex-wrap: wrap
+			.intro-img
+				width: 180px
+				img
+			figcaption 
+				width: calc(100% - 180px)
+				padding-left: 30px
+				.intro-content
+					color: $white
+					+fs(16rem)
+					line-height: 2
+.about-history
+	padding: 100px 0
+	background: $bluebg
+	.history-wrap
+		+pos(rel,null)
+		margin: 60px 0
+		&:before
+			content: ''
+			display: block
+			width: 2px
+			height: 100%
+			background: $blue
+			+pos(abs, 0 null 0 50%)
+			+transform(translateX(-50%))
+		.milestones
+			+flexbox
+			flex-wrap: wrap
+			align-items: center
+			align-content: center
+			margin-bottom: 40px
+			.time
+				text-align: center
+				padding: 10px 0
+				width: 150px
+				height: 100%
+				background: $bluebg
+				order: 2
+				+pos(rel,null)
+				z-index: 5
+				.date
+					+fs(14rem)
+					color: darken($white,60%)
+				.year
+					+fs(18rem)
+					color: $blue
+					font-weight: 600
+			.img 
+				width: calc((100% - 150px)/2)
+				order: 1
+				img
+			.event
+				width: calc((100% - 150px)/2)
+				+fs(16rem)
+				line-height: 2
+				order: 3
+				+flexbox
+				align-items: center
+				align-content: center
+			&:nth-child(even)
+				.img 
+					order: 3
+				.event
+					order: 1
+	.home-feature
+		margin: 0 auto 30px
+
+.about-staff, .about-different
+	width: 50%
+	padding: 100px 110px
+.about-staff
+	.about-title
+		color: $blue
+		+fs(24rem)
+		&:after
+			background: $blue
+.about-different
+	background: $blue
+	.title
+		+fs(14rem)
+		color: $orange
+		margin-bottom: 5px
+	.caption
+		+fs(48rem)
+		color: $white
+		line-height: 1.2
+		margin-bottom: 20px
+	.about-des
+		+fs(16rem)
+		color: color-rgba($white,0.6)
+		margin-bottom: 20px
+	.different-list
+		li 
+			+flexbox
+			flex-wrap: wrap
+			margin-bottom: 15px
+			.icon
+				width: 50px
+				img
+			.des
+				width: calc(100% - 50px)
+				color: color-rgba($white,0.6)
+				padding-left: 10px
+				.title
+					+fs(16rem)
+					color: $white
+					margin-bottom: 5px
+.about-factory
+	padding: 100px 0
+	.headtitle
+		color: $white
+		&:after
+			background: $white
+	.pagedes
+		color: $white
+	.factory-feature
+		+flexbox
+		flex-wrap: wrap
+		.featurecol
+			width: 33.33%
+			padding: 0px 50px
+			text-align: center
+			color: $white
+			+ .featurecol
+				// border-left: 2px solid darken($white,20%)
+			.number
+				.counter, .label, img
+					display: inline-block
+					vertical-align: middle
+				.counter
+					+fs(60rem)
+					color: $orange
+					font-weight: 800
+				.label
+					+fs(18rem)
+					font-weight: 600
+					margin-left: -15px
+				img 
+					margin-left: 5px
+			.des
+				+fs(12rem)
+				font-weight: 600
+				text-transform: uppercase
+				line-height: 1.3
+			&:last-child
+				.number
+					position: relative
+					.label
+						position: absolute
+						top: 29px
+						right: -75px
+						line-height: 1
+
+.about-company
+	padding: 60px 0
+	background: $orangebg
+	.pagedes
+		color: color-rgba($black,0.6)
+		margin-bottom: 20px
+		font-weight: 600
+	.btn-wrap
+		text-align: center
+	.link
+		+mainbutton
+		background: $orange
+		color: $white
+		border: none
+		line-height: 40px
+		padding: 0px 50px
+		margin-bottom: 60px
+		text-transform: uppercase
+		&:hover
+			background: darken($orange,10%)

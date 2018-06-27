@@ -1,0 +1,259 @@
+header
+	+pos(fix, 0 0 null 0)
+	z-index: 1000
+	box-shadow: 0px 3px 20px color-rgba($black,0.05)
+	.headertop
+		background: $blue
+	.location
+		+fs(12rem)
+		color: $white
+		line-height: 30px
+		float: left
+		+media-breakpoint-down(xs)
+			display: none
+		.fa
+			margin-right: 10px
+	.colright
+		float: right
+	.searchtoggle
+		color: $white
+		+fs(14rem)
+		line-height: 30px
+		float: left
+	.language
+		float: left
+		margin-left: 15px
+		ul 
+			li 
+				display: inline-block
+				+fs(12rem)
+				line-height: 30px
+				+ li 
+					margin-left: 10px
+					+pos(rel,null)
+					&:before
+						content: ''
+						display: block
+						width: 1px
+						height: 10px
+						background: $white
+						+pos(abs, 10px null null -8px)
+				a 
+					color: $white
+				&.active
+					a 
+						color: $orange
+	.headermain
+		background: $white
+		.sitelogo
+			padding: 20px 0
+			float: left
+			+media-breakpoint-down(lg)
+				padding: 10px 0
+			a 
+				display: block
+			img 
+				height: 50px
+				+media-breakpoint-down(lg)
+					height: 40px
+	.overlay
+		+pos(fix, 0 null 0 0)
+		right: 0
+		background: $black
+		opacity: 0.7
+		z-index: 900
+		display: none
+	.btn-showmenu
+		display: none
+		width: 40px
+		height: 40px
+		line-height: 34px
+		margin: 10px 0
+		margin-right: 15px
+		text-align: center
+		+fs(18rem)
+		background: darken($white,3%)
+		border: 1px solid darken($white,10%)
+		float: left
+		+media-breakpoint-down(lg)
+			display: block
+		span 
+			&:before
+				content: '\f0c9'
+				font-family: 'fontawesome'
+	.menu
+		float: left
+		margin-left: 25px
+		+media-breakpoint-down(lg)
+			float: none
+			+pos(fix, 0 null 0 0)
+			margin: 0
+			padding: 0
+			z-index: 1000
+			width: 280px
+			background: $white
+			+transition(all,0.5s)
+			+transform(translateX(-280px))
+			&.open
+				+transform(translateX(0))
+		.sitelogo
+			display: none
+			+media-breakpoint-down(lg)
+				display: block
+				text-align: center
+				float: none
+				border-bottom: 2px solid $blue
+				a 
+					// text-align: center
+					img 
+						height: 50px
+		.menuwrap
+			+media-breakpoint-down(lg)
+				max-height: calc(100vh - 72px)
+				overflow: auto
+		ul.menulink
+			> li 
+				float: left
+				line-height: 28px
+				padding: 30px 0
+				+pos(rel,null)
+				+media-breakpoint-down(lg)
+					float: none
+					border-bottom: 1px solid darken($white,10%)
+					padding: 0px
+				> a 
+					display: block
+					+fs(14rem)
+					text-transform: uppercase
+					font-weight: 600
+					padding: 0px 20px
+					color: $blue
+					+media-breakpoint-down(lg)
+						padding: 10px 20px
+					&:after
+						content: ''
+						display: block
+						width: 50px
+						height: 2px
+						background: $orange
+						margin: 0px auto
+						opacity: 0
+						+transition(all,0.3s)
+						+media-breakpoint-down(lg)
+							display: none
+				.btn-showsub
+					display: none
+					width: 40px
+					height: 30px
+					line-height: 30px
+					text-align: center
+					+fs(20rem)
+					+pos(abs, 8px 0 null null)
+					+media-breakpoint-down(lg)
+						display: block
+				.sub
+					display: none
+					+pos(abs, 100% null null 50%)
+					+transform(translateX(-50%))
+					+media-breakpoint-down(lg)
+						display: none
+						+pos(static,unset)
+						+transform(translateX(0))
+						background: darken($white,3%)
+					ul 
+						li 
+							a 
+								display: block
+								padding: 6px 15px
+								white-space: nowrap
+								background: $white
+								color: $blue
+								+fs(14rem)
+								text-align: center
+								border-top: 1px solid darken($white,10%)
+								+media-breakpoint-down(lg)
+									border: none
+									background: none
+									text-align: left
+									padding: 6px 25px
+							&:hover, &.active
+								a 
+									color: $orange
+				&:hover
+					+media-breakpoint-up(xl)
+						> a 
+							&:after
+								opacity: 1
+						.sub
+							display: block
+				&.active
+					> a 
+						color: $orange
+						&:after
+							opacity: 1
+		.language
+			display: none
+	.hotline
+		float: right
+		padding: 25px 0
+		+media-breakpoint-down(lg)
+			padding: 10px 0
+		a
+			display: block
+			line-height: 36px
+			+bor-rad(50px)
+			border: 2px solid $orange
+			padding: 0px 20px
+			+fs(18rem)
+			color: $orange
+			box-sizing: border-box
+			+media-breakpoint-down(xs)
+				+fs(0)
+				padding: 0
+				width: 40px
+				height: 40px
+				line-height: 36px
+				text-align: center
+		.fa 
+			margin-right: 10px
+			+media-breakpoint-down(xs)
+				+fs(18rem)
+				line-height: 36px
+				margin-right: 0
+	.search
+		+pos(fix, 120px 0 0 0)
+		z-index: 100
+		background: color-rgba($blue,0.9)
+		+flexbox
+		padding-top: 100px
+		display: none
+		// visibility: hidden
+		// opacity: 0
+		// +transition(all,0.3s)
+		// &.open
+			// visibility: visible
+			// opacity: 1
+		.btn-closesearch
+			width: 100%
+			text-align: right
+			+fs(24rem)
+			color: $white
+			margin-bottom: 40px
+			cursor: pointer
+		.searchwrap
+			line-height: 56px
+			+bor-rad(50px)
+			border: 2px solid $white
+			+flexbox
+			input
+				background: none
+				border: none
+				color: $white
+				width: calc(100% - 60px)
+				padding: 0px 40px
+			.searchbutton
+				width: 60px
+				color: $white
+				+fs(24rem)
+				text-align: center
+				cursor: pointer
